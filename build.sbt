@@ -66,7 +66,7 @@ val commonSettings = Seq(
     CrossVersion.partialVersion(scalaVersion.value) match {
       case Some((2, 12)) | Some((2, 13)) =>
         Seq(
-          "-opt-inline-from:org.parboiled2.**",
+          "-opt:inline:org.parboiled2.**",
           "-opt:l:inline"
         )
       case Some((3, _)) =>
